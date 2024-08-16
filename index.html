@@ -3,127 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jealous Gummy on Cardano</title>
+    <title>Gummy Universe</title>
     <style>
         /* CSS Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: #1a1a1a;
-            color: #f5f5f5;
+            background: linear-gradient(135deg, #ff00cc, #333399);
+            color: white;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         header {
-            background: #32cd32;
+            background: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
-        header img {
-            max-width: 150px;
-        }
-
-        .main-banner {
-            padding: 40px 20px;
-            text-align: center;
-            background: #2e2e2e;
-            border-bottom: 5px solid #32cd32;
-        }
-
-        .main-banner h1 {
+        header h1 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #32cd32;
-            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
         }
 
-        .main-banner img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
-        }
-
-        .main-banner img:hover {
-            transform: scale(1.05);
-        }
-
-        .section {
-            padding: 60px 20px;
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            background: #1a1a1a;
+            background: url('image1.jfif') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 20px;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
         }
 
-        .section:nth-of-type(even) {
-            background: #2e2e2e;
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #32cd32;
-            font-weight: 700;
-        }
-
-        .section img {
-            width: 100%;
-            max-width: 300px;
+        .hero h2 {
+            font-size: 4rem;
             margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s;
+            animation: float 6s ease-in-out infinite;
         }
 
-        .section img:hover {
-            transform: scale(1.05);
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
         }
 
-        .section p, .section ol {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #dcdcdc;
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto 20px;
-        }
-
-        .section ol {
-            padding-left: 20px;
-        }
-
-        .section .btn {
-            background: #32cd32;
-            color: white;
+        .hero .btn {
+            background: #ff00cc;
             padding: 15px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            color: white;
+            border-radius: 50px;
             font-weight: bold;
-            transition: background 0.3s;
-            display: inline-block;
-            margin-top: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, transform 0.3s;
         }
 
-        .section .btn:hover {
-            background: #28a428;
+        .hero .btn:hover {
+            background: #ff3399;
+            transform: scale(1.05);
+        }
+
+        .content-section {
+            padding: 100px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+        }
+
+        .content-section h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ff00cc;
+        }
+
+        .content-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content-section img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .content-section img:hover {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .parallax-section {
+            background: url('image2.jpg') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .parallax-section h2 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
         }
 
         footer {
-            background: #32cd32;
+            background: #333399;
             color: white;
             text-align: center;
             padding: 40px 20px;
-            margin-top: 40px;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 50px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
         }
 
         footer img {
@@ -134,51 +147,55 @@
         }
 
         footer img:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) rotate(10deg);
         }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
     </style>
 </head>
 <body>
 
 <header>
-    <img src="image1.jfif" alt="Jealous Gummy Logo">
-    <h1>The $Jealous Gummy on Cardano</h1>
+    <h1>Gummy Universe</h1>
 </header>
 
-<section class="main-banner">
-    <h1>Dis Red Gummy is a B!*ch A$$, I only eat him cause der too many of em</h1>
-    <img src="image2.jpg" alt="Jealous Gummy Bear Image">
+<section class="hero">
+    <h2>Welcome to the Gummy Universe</h2>
+    <p>Where gummies come to life in a world of endless possibilities.</p>
+    <a href="#" class="btn">Explore Now</a>
 </section>
 
-<section class="section">
-    <h2>About Me:</h2>
-    <img src="image3.jfif" alt="About Jealous Gummy">
-    <p>Yo, I is da Gummy on Cardano, I don’t like dat B!*ch A$$ Red Gummy on dat udah Chain... I don’t got no Influence Media mogul frens like he do, but I have da Cardano Community... and yeah, I JEALOUS, but I owns dis space and it’s ok. Let’s embrace da JEALOUSY, cause we knows we beta dan anyone dat tink dey cool... and yeah, I gotta foul mouth sometimes, forgive me for dat.</p>
-    <a href="#" class="btn">Join da Community</a>
+<section class="content-section">
+    <h2>About the Gummy Universe</h2>
+    <p>The Gummy Universe is a place where every gummy has a story. From sweet beginnings to epic adventures, discover the world where flavors and fun collide.</p>
+    <img src="image3.jfif" alt="Gummy Adventure">
 </section>
 
-<section class="section">
-    <h2>SugANOMICS:</h2>
-    <img src="image4.jfif" alt="SugANOMICS">
-    <p>Utility LP - 50%, CEX, DEX, Additional Liquidity & Market Makers - 12.5%, Marketing, Airdrops, Contests, Events, etc - 10%, Utility (Future applications & Project Dev) - 12.5%, Team & Founders 15%</p>
-    <p>Policy ID (CA): 21db384AfAb5317192586ffb3269060c8164b13ce89888070ca97</p>
+<section class="parallax-section">
+    <h2>Join the Gummy Adventure</h2>
 </section>
 
-<section class="section">
-    <h2>How to Buy:</h2>
-    <img src="image5.jfif" alt="How to Buy Jealous Gummy">
-    <ol>
-        <li>Get a Cardano wallet like Begin, Nami, Yoroi, Eternl, Flint, etc.</li>
-        <li>Get some Cardano (SADA Token) directly from yo wallet, if possible or from a CEX like Binance, Coinbase and den you send to yo Cardano Wallet.</li>
-        <li>Visit a Cardano Dex like Minswap and swap some $ADA for some $JEALOUS by searching for $JEALOUS or using the Policy ID above... make sure dat da $JEALOUS token you swapping $ADA for has same Policy ID as above.</li>
-        <li>Dang yous one smart A$$ Degen, you is now part of da $JEALOUS Gummy pack, we here to let da world know dat we’re da best Gummy on da best chain an we aint never has to worry about "maintenance downtime"!!!</li>
-    </ol>
+<section class="content-section">
+    <h2>Become a Part of Our Universe</h2>
+    <p>Sign up today to receive exclusive access to the latest gummy creations, events, and more. Don’t miss out on being a part of the most delicious universe in the galaxy!</p>
+    <img src="image4.jfif" alt="Join Us">
 </section>
 
 <footer>
-    <p>Stay Jealous, Join da Pack!</p>
-    <a href="#" class="btn">Join da Community</a>
-    <img src="image6.jfif" alt="Footer Image">
+    <p>&copy; 2024 Gummy Universe. All Rights Reserved.</p>
+    <img src="image5.jfif" alt="Gummy Footer Image">
 </footer>
 
 </body>

@@ -89,7 +89,7 @@
         .content-section h2 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #ff00cc;
+            color: #32cd32; /* Changed color to green for better visibility */
         }
 
         .content-section p {
@@ -175,6 +175,24 @@
             filter: brightness(1);
         }
 
+        .airdrop-btn {
+            background: #32cd32;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .airdrop-btn:hover {
+            background: #28a428;
+            transform: scale(1.05);
+        }
+
         @keyframes float {
             0%, 100% {
                 transform: translateY(0);
@@ -196,6 +214,7 @@
     <h2>Dis Red Gummy is a B!*ch A$$, I only eat him cause der too many of em</h2>
     <p>Welcome to da $Jealous Gummy Universe, where every gummy has a story, and we all know dat we the best in da game!</p>
     <a href="#" class="btn">Join da Movement</a>
+    <a href="#airdrop-form" class="airdrop-btn">AIRDROPS</a>
 </section>
 
 <section class="content-section">
@@ -208,7 +227,7 @@
     <h2>Join the Gummy Adventure</h2>
 </section>
 
-<section class="content-section">
+<section class="content-section" id="airdrop-form">
     <h2>How to Buy:</h2>
     <p>1. Get a Cardano wallet like Begin, Nami, Yoroi, Eternl, Flint, etc.</p>
     <p>2. Get some Cardano (SADA Token) directly from yo wallet, if possible or from a CEX like Binance, Coinbase and den you send to yo Cardano Wallet.</p>

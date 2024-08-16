@@ -50,6 +50,24 @@
             color: #ffffff;
             padding: 20px;
             box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay to increase text visibility */
+            z-index: 1;
+        }
+
+        .hero h2, .hero p {
+            z-index: 2;
+            position: relative;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
         }
 
         .hero h2 {
@@ -72,6 +90,8 @@
             font-weight: bold;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: background 0.3s, transform 0.3s;
+            z-index: 2;
+            position: relative;
         }
 
         .hero .btn:hover {
@@ -89,7 +109,8 @@
         .content-section h2 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #32cd32; /* Changed color to green for better visibility */
+            color: #32cd32;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Added text shadow for visibility */
         }
 
         .content-section p {
@@ -119,6 +140,20 @@
             justify-content: center;
             align-items: center;
             box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .parallax-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay to increase text visibility */
+            z-index: 1;
         }
 
         .parallax-section h2 {
@@ -126,6 +161,9 @@
             text-transform: uppercase;
             letter-spacing: 5px;
             font-weight: bold;
+            z-index: 2;
+            position: relative;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Added text shadow for visibility */
         }
 
         footer {
@@ -186,6 +224,8 @@
             display: inline-block;
             margin-top: 20px;
             transition: background 0.3s, transform 0.3s;
+            z-index: 2;
+            position: relative;
         }
 
         .airdrop-btn:hover {
@@ -291,7 +331,7 @@
     <h2>Dis Red Gummy is a B!*ch A$$, I only eat him cause der too many of em</h2>
     <p>Welcome to da $Jealous Gummy Universe, where every gummy has a story, and we all know dat we the best in da game!</p>
     <a href="#" class="btn">Join da Movement</a>
-    <a href="#airdrop-form" class="airdrop-btn">AIRDROPS</a>
+    <a href="https://jealousgummy.online/airdrop/" class="airdrop-btn">AIRDROPS</a>
 </section>
 
 <section class="content-section">
